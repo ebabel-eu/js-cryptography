@@ -2,6 +2,7 @@
 <html ng-app="jsCryptography">
     <head>
         <title>Javascript cryptography</title>
+        <link rel="shortcut icon" type="image/png" href="/img/pink-star.gif"/>
 
         <link rel="stylesheet" type="text/css" href="css/default.min.css">
 
@@ -15,20 +16,25 @@
         <section>
             <h2>MD5</h2>
 
-            <form ng-controller="Md5Controller">
+            <form ng-controller="Md5Controller as md5Ctrl" name="md5Form">
                 <fieldset>
-                    <label>
-                        <input type="email" placeholder="Enter your e-mail" 
-                            ng-model="email.text" required
-                            ng-change="setHash(email)">
-                        <span ng-show="email.text && email.hash"><em>{{email.hash}}</em> is the MD5 hash of {{email.text}}.</span>
-                    </label>
+                    <input 
+                        type="email" 
+                        placeholder="Write your e-mail" 
+                        required 
+                        ng-model="email.text" 
+                        ng-change="md5Ctrl.setHash(email)" 
+                        ng-model-options="{ debounce: 350 }">
+
+                    <p ng-show="email.text && email.hash"><em ng-attr-title="This is the MD5 hash of {{email.text}}">{{email.hash}}</em> totally hashes your {{email.text}} awesome e-mail!</p>
+
+                    <p ng-show="!md5Form.$valid">I need your e-mail, and it's got to be valid!</p>
                 </fieldset>
             </form>
         </section>
 
         <footer>
-            <p>&copy; 2015 Nadjib Amar, MIT License</p>
+            <p>&copy; 2015 <a href="http://ebabel.eu">Nadjib Amar</a> <small>(MIT License)</small></p>
         </footer>
 
         <script src="js/scripts.min.js"></script>
