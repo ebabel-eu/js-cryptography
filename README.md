@@ -4,8 +4,6 @@ Test client side Javascript cryptography algorythms.
 
 ## todo
 
-- Improve the Gravatar code to only suggest getting an avatar if the default was returned (use $http)
-- If the default Gravatar was returned, show the drawing of the sad kitty
 - Add unit tests
 - Add end to end tests
 - Link to this angular app from ebabel.eu home website

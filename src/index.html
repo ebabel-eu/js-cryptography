@@ -33,8 +33,9 @@
             </form>
         </section>
 
-        <section ng-controller="GravatarController as grvtrCtrl" ng-show="grvtrCtrl.avatar.found">
-            <h2>Is that your cutie pie face!??</h2>
+        <section ng-controller="GravatarController as grvtrCtrl" ng-show="grvtrCtrl.avatar.response">
+            <h2 ng-show="grvtrCtrl.avatar.found">What a cutie pie Gravatar you got yourself!!!</h2>
+            <h2 ng-show="!grvtrCtrl.avatar.found">Booo, le sad, no Gravatar :-(</h2>
 
             <form>
                 <fieldset>
@@ -42,7 +43,9 @@
                         <img ng-src="{{grvtrCtrl.avatar.url}}" src="../img/sad-kitty-by-rakuhund.jpg" alt="avatar">
                     </p>
 
-                    <p>This isn't you!!? Get your own <a href="http://gravatar.com">Gravatar</a> then :p</p>
+                    <p ng-show="grvtrCtrl.avatar.found">I sooo totally love your Gravatar :-)</p>
+
+                    <p ng-show="!grvtrCtrl.avatar.found">I couldn't find your <a href="http://gravatar.com">Gravatar selfie</a>... wanna make one?</p>
                 </fieldset>
             </form>
         </section>

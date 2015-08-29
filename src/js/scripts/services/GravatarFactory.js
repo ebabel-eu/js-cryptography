@@ -11,7 +11,8 @@ angular
                     'http://www.gravatar.com/avatar/', 
                     input.hash, 
                     '?s=', 
-                    input.size
+                    input.size,
+                    '&d=404'
                 ].join('');
             }
 
@@ -28,13 +29,16 @@ angular
                             // Success.
                             controller.avatar = {
                                 url: url,
-                                found: true
+                                found: true,
+                                response: true
                             };
                         }, function (response) {
                             // Error.
                             // todo: use the cute cat picture here.
                             controller.avatar = {
-                                found: false
+                                url: './img/sad-kitty-by-rakuhund.jpg',
+                                found: false,
+                                response: true
                             };
                         });
                 }

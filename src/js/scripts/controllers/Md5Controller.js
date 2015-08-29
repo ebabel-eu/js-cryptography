@@ -13,7 +13,7 @@ angular
                 toUpdate.hash = Hash.get(toUpdate.text);
 
                 // Emit a custom event to communicate with another controller.
-                $rootScope.$broadcast('updateGravatar', toUpdate);
+                $rootScope.$broadcast('getGravatar', toUpdate);
             };
 
         }

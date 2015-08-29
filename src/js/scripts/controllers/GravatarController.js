@@ -10,7 +10,8 @@ angular
         function GravatarController ($scope, Gravatar) {
             var controller = this;
 
-            $scope.$on('updateGravatar', function (event, args) {
+            // Listen to a custom event, ready to be triggered from anywhere in the app.
+            $scope.$on('getGravatar', function (event, args) {
                 Gravatar.get({
                     controller: controller,
                     args: args
