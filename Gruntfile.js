@@ -10,8 +10,8 @@ module.exports = function (grunt) {
                 configFile: './src/lint/es-lint.json'    // Default rules: http://eslint.org/docs/rules/
             },
             target: [
-                './src/js/*.js',
-                './src/js/**/*.js'
+                './src/js/scripts/*.js',
+                './src/js/scripts/**/*.js'
             ]
         },
 
@@ -24,15 +24,13 @@ module.exports = function (grunt) {
                 files: {
                     // Third party javascript dependencies used in this website.
                     './build/js/dependencies.js' : [
-                        // Libraries managed with Bower.
                         './bower_components/angular/angular.js'
-
-                        // If libraries can't be managed by Bower, add them here.
                     ],
                     
                     // All custom scripts written for this website.
-                    './build/js/scripts.js': [
-                        './src/js/scripts/*.js'
+                    './build/js/default.js': [
+                        './src/js/scripts/*.js',
+                        './src/js/scripts/**/*.js'
                     ]
                 }
             }
