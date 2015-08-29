@@ -7,7 +7,8 @@ Test client side Javascript cryptography algorythms.
 - Implement MD5 hashing
 - Add unit tests
 - Add end to end tests
-- Link to this from ebabel.eu home
+- Link to this angular app from ebabel.eu home website
+- From e-mail, get Gravatar and any extra information
 
 ## Install
 

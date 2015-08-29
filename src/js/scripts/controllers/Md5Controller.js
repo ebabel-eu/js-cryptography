@@ -9,7 +9,7 @@ angular
         // MD5 Controller.
         function Md5Controller ($scope, Hash) {
 
-            $scope.setHash = function (toUpdate) {
+            this.setHash = function (toUpdate) {
                 toUpdate.hash = Hash.get(toUpdate.text);
             };
 

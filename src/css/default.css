@@ -2,30 +2,37 @@ body {
     background-color: #EDE8F3;
     color: #691D71;
     font-size: 14px;
-    font-family: 'Courier New', monospace;
+    font-family: 'Lucida Grande', 'Segoe UI', 'Droid Sans', Verdana, Arial, sans-serif;
     margin: 16px;
     padding: 0;
 }
 
 header, section, footer {
-    max-width: 1024px;
+    max-width: 900px;
     margin: 0 auto 24px;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+footer {
+    text-align: right;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'French Script MT', 'Tempus Sans ITC', 'Bradley Hand ITC', cursive;
     margin: 0 0 .5em;
 }
 
 h1 {
-    font-size: 24px;
-    text-transform: uppercase;
+    font-size: 28px;
+    text-transform: capitalize;
 }
 
 h1 small {
+    font-family: 'Lucida Grande', 'Segoe UI', 'Droid Sans', Verdana, Arial, sans-serif;
     display: block;
-    font-size: 20px;
+    font-size: 14px;
     color: #9898B5;
     text-transform: lowercase;
+    line-height: 24px
 }
 
 h2 {
@@ -34,6 +41,29 @@ h2 {
 
 h3 {
     font-size: 18px;
+}
+
+p {
+    margin: 0 0 14px;
+    line-height: 24px;
+}
+
+a {
+    padding: 0 .25em;
+}
+
+a:hover,
+a:active {
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #FBBFFF;
+}
+
+a:active {
+    color: #FBBFFF;
+    background-color: #691D71;
 }
 
 section h2 {
@@ -53,13 +83,14 @@ form {
 
 fieldset {
     border: 0;
-    padding: 16px;
+    padding: 16px 16px 2px;
     margin: 0;
 }
 
 input {
     font-family: 'Courier New', monospace;
     background-color: #FDFDFD;
+    margin: 0 0 1em;
     padding: 5px 10px;
     font-size: 14px;
     color: #BB00C7;
@@ -70,10 +101,11 @@ input {
 }
 
 em {
-    font-weight: bold;
-    padding: 0 .5em;
-    background-color: #FF74FF;
+    padding: .2em .75em;
+    background-color: #FBBFFF;
     font-style: normal;
+    border-radius: 16px;
+    margin-right: .25em;
 }
 
 .ng-dirty.ng-invalid {
