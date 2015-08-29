@@ -9,3 +9,4 @@ node_modules
 build
 src/js/dependencies.js
 src/js/scripts.js
+html-angular-validate-report.json

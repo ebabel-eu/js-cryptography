@@ -9,19 +9,18 @@
     </head>
     <body>
         <header>
-            <h1>Javascript cryptography <small>run client side Javascript cryptography algorythms in your browser</small> </h1>
+            <h1>Javascript cryptography <small>run cryptography algorythms in your browser</small> </h1>
         </header>
 
         <section>
-            <h1>MD5</h1>
+            <h2>MD5</h2>
 
-            <form>
+            <form ng-controller="Md5Controller">
                 <fieldset>
-                    <label>
-                        E-mail to hash with MD5
-                        <input type="email">
-                    </label>
+                    <input type="email" placeholder="Enter your e-mail" ng-model="email">
                 </fieldset>
+
+                <p>{{email}}</p>
             </form>
         </section>
 
