@@ -19,7 +19,7 @@ There is no linting in this version, since linting is meant to happen during dev
 grunt
 ```
 
-## Watch build while development
+## Watch build during development
 
 During development, continuous building for both css and javascript: run `grunt watch` command.
 

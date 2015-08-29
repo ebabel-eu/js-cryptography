@@ -62,7 +62,7 @@ module.exports = function (grunt) {
 
         htmlangular: {
             options: {
-                reportpath: 'lint/html-angular-validate-report.json'
+                reportpath: 'src/lint/html-angular-validate-report.json'
             },
             files: {
                 src: [
