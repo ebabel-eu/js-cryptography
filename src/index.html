@@ -17,13 +17,18 @@
 
             <form ng-controller="Md5Controller">
                 <fieldset>
-                    <input type="email" placeholder="Enter your e-mail" ng-model="email.text" required>
+                    <label>
+                        <input type="email" placeholder="Enter your e-mail" 
+                            ng-model="email.text" required
+                            ng-change="setHash()">
+                        <span ng-show="email.hash">MD5 hash is {{email.hash}}</span>
+                    </label>
                 </fieldset>
 
                 <p>{{email}}</p>
 
-
-                <p ng-show="email.hash">{{email.text}} MD5 hash is {{email.hash}}</p>
+                <p>{{sayHello()}}</p>
+                
             </form>
         </section>
 
