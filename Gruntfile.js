@@ -23,12 +23,12 @@ module.exports = function (grunt) {
             js: {
                 files: {
                     // Third party javascript dependencies used in this website.
-                    './build/js/dependencies.js' : [
+                    './src/js/dependencies.js' : [
                         './bower_components/angular/angular.js'
                     ],
                     
                     // All custom scripts written for this website.
-                    './build/js/scripts.js': [
+                    './src/js/scripts.js': [
                         './src/js/scripts/*.js',
                         './src/js/scripts/**/*.js'
                     ]
@@ -47,14 +47,14 @@ module.exports = function (grunt) {
             scripts: {
                 files: {
                     './build/js/scripts.min.js': [
-                        './build/js/scripts.js'
+                        './src/js/scripts.js'
                     ]
                 }
             },
             dependencies: {
                 files: {
                     './build/js/dependencies.min.js': [
-                        './build/js/dependencies.js'
+                        './src/js/dependencies.js'
                     ]
                 }
             }
@@ -78,7 +78,7 @@ module.exports = function (grunt) {
             target: {
                 files: [{
                     expand: true,
-                    cwd: './build/css',
+                    cwd: './src/css',
                     src: ['*.css', '!*.min.css'],
                     dest: './build/css',
                     ext: '.min.css'
