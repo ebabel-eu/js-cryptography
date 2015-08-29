@@ -11,7 +11,7 @@ angular
             var controller = this;
 
             $scope.$on('updateGravatar', function (event, args) {
-                Gravatar.update({
+                Gravatar.get({
                     controller: controller,
                     args: args
                 });

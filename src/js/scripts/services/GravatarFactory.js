@@ -1,19 +1,42 @@
 angular
     .module('jsCryptography')
     .factory('Gravatar', [
-        function GravatarFactory() {
-            return {
-                update: function (data) {
-                    var gravatarUrl = 'http://www.gravatar.com/avatar/';
-                    var size = 200;
-                    var controller = data.controller;
-                    var args = data.args;
 
-                    // todo: use $http to make a call here.
-                    controller.avatar = {
-                        url: [gravatarUrl, args.hash, '?s=', size].join(''),
-                        found: true
-                    };
+        '$http',
+
+        function GravatarFactory ($http) {
+
+            function getUrl (input) {
+                return [
+                    'http://www.gravatar.com/avatar/', 
+                    input.hash, 
+                    '?s=', 
+                    input.size
+                ].join('');
+            }
+
+            return {
+                get: function (data) {
+                    var controller = data.controller;
+                    var url = getUrl({
+                        hash: data.args.hash,
+                        size: 200
+                    });
+
+                    $http.get(url)
+                        .then(function (response) {
+                            // Success.
+                            controller.avatar = {
+                                url: url,
+                                found: true
+                            };
+                        }, function (response) {
+                            // Error.
+                            // todo: use the cute cat picture here.
+                            controller.avatar = {
+                                found: false
+                            };
+                        });
                 }
             }
         }
