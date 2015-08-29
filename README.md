@@ -46,3 +46,11 @@ node dev.index.js
 ## Browse locally
 
 Browse to http://localhost:5000
+
+## Deploy to production
+
+Checkout gh-pages and use the build files as the only files to push to gh-pages, from the root of the repository main directory.
+
+## Browse on production
+
+Browse to http://ebabel-eu.github.io/js-cryptography/
