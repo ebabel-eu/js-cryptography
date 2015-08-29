@@ -32,7 +32,8 @@ h1 small {
     font-size: 14px;
     color: #9898B5;
     text-transform: lowercase;
-    line-height: 24px
+    line-height: 24px;
+    font-weight: 200;
 }
 
 h2 {
