@@ -9,7 +9,7 @@ body {
 
 header, section, footer {
     max-width: 1024px;
-    margin: 0 auto 32px;
+    margin: 0 auto 24px;
 }
 
 h1, h2, h3, h4, h5, h6, p {
@@ -42,8 +42,13 @@ section h2 {
     padding: 10px 16px;
 }
 
+section h2:first-child {
+    border-radius: 8px 8px 0 0;
+}
+
 form {
     background-color: #FEEFFF;
+    border-radius: 0 0 8px 8px;
 }
 
 fieldset {
@@ -60,6 +65,15 @@ input {
     color: #BB00C7;
     outline: none;
     border: solid 2px #FBBFFF;
+    border-radius: 8px;
+    min-width: 220px;
+}
+
+em {
+    font-weight: bold;
+    padding: 0 .5em;
+    background-color: #FF74FF;
+    font-style: normal;
 }
 
 .ng-dirty.ng-invalid {
@@ -67,5 +81,5 @@ input {
 }
 
 .ng-dirty.ng-valid {
-    border-color: #49E849;
+    border-color: #49E8B9;
 }

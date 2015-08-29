@@ -2,21 +2,17 @@ angular
     .module('jsCryptography')
     .controller('Md5Controller', [
 
-        function Md5Controller () {
-            var controller = this;
+        // Dependencies.
+        '$scope', 
+        'Hash',
 
-            this.email = {
-                text: null,
-                hash: null
+        // MD5 Controller.
+        function Md5Controller ($scope, Hash) {
+
+            $scope.setHash = function (toUpdate) {
+                toUpdate.hash = Hash.get(toUpdate.text);
             };
 
-            this.setHash = function () {
-                return 'test@test.com';
-            };
-
-            this.sayHello = function () {
-                return controller.email.text = 'Hello';
-            }
         }
 
     ]

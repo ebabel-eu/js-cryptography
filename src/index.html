@@ -20,15 +20,10 @@
                     <label>
                         <input type="email" placeholder="Enter your e-mail" 
                             ng-model="email.text" required
-                            ng-change="setHash()">
-                        <span ng-show="email.hash">MD5 hash is {{email.hash}}</span>
+                            ng-change="setHash(email)">
+                        <span ng-show="email.text && email.hash"><em>{{email.hash}}</em> is the MD5 hash of {{email.text}}.</span>
                     </label>
                 </fieldset>
-
-                <p>{{email}}</p>
-
-                <p>{{sayHello()}}</p>
-                
             </form>
         </section>
 
