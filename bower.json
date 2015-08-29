@@ -1,0 +1,24 @@
+{
+  "name": "js-cryptography",
+  "version": "1.0.0",
+  "authors": [
+    "nadjibamar <hello@ebabel.eu>"
+  ],
+  "description": "Test client side Javascript cryptography algorythms.",
+  "main": "index.js",
+  "moduleType": [
+    "es6"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.4.5",
+    "forge": "0.6.34"
+  }
+}

@@ -1,0 +1,14 @@
+{
+    "env": {
+        "browser": true,
+        "node": false
+    },
+    "globals": {
+        "window": true
+    },
+    "rules": {
+        "no-redeclare": [2, {"builtinGlobals": true}],
+        "no-undef": 2,
+        "quotes": [2, "single"]
+    }
+}
