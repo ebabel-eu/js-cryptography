@@ -24,7 +24,7 @@ grunt watch
 ## Run locally
 
 ```
-node index.js
+node dev.index.js
 ```
 
 ## Browse locally

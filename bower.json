@@ -5,7 +5,7 @@
     "nadjibamar <hello@ebabel.eu>"
   ],
   "description": "Test client side Javascript cryptography algorythms.",
-  "main": "index.js",
+  "main": "production.index.js",
   "moduleType": [
     "es6"
   ],

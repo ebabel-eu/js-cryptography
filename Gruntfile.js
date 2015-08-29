@@ -28,7 +28,7 @@ module.exports = function (grunt) {
                     ],
                     
                     // All custom scripts written for this website.
-                    './build/js/default.js': [
+                    './build/js/scripts.js': [
                         './src/js/scripts/*.js',
                         './src/js/scripts/**/*.js'
                     ]
@@ -46,50 +46,16 @@ module.exports = function (grunt) {
             },
             scripts: {
                 files: {
-                    './build/js/scripts.min.js': ['./build/js/scripts.js']
+                    './build/js/scripts.min.js': [
+                        './build/js/scripts.js'
+                    ]
                 }
             },
             dependencies: {
                 files: {
-                    './build/js/dependencies.min.js': ['./build/js/dependencies.js']
-                }
-            }
-        },
-
-        scsslint: {
-            allFiles: [
-                './src/sass/default.scss',
-                './src/sass/**/*.scss'
-            ],
-            options: {
-                config: './lint/scss-lint.yml',
-                colorizeOutput: true
-            },
-        },
-
-        sass: {
-            dist: {
-                options: {
-                    style: 'expanded',
-                    lineNumbers: true,
-                    'sourcemap=none': ''
-                },
-                files: {
-                    './build/css/default.css': './src/sass/default.scss'
-                }
-            }
-        },
-
-        pleeease: {
-            custom: {
-                options: {
-                    autoprefixer: {
-                        'browsers': ['last 4 versions']
-                    },
-                    minifier: false
-                },
-                files: {
-                    './build/css/default.css': './build/css/default.css'
+                    './build/js/dependencies.min.js': [
+                        './build/js/dependencies.js'
+                    ]
                 }
             }
         },
@@ -164,18 +130,6 @@ module.exports = function (grunt) {
         // Re-run these automated tasks each time certain files are modified.
         // These tasks are meant for development and include linting.
         watch: {
-            sass: {
-                files: [
-                    './lint/scss-lint.yml',
-                    './src/css/**/*.scss'
-                ],
-                tasks: [
-                    'scsslint',
-                    'sass',
-                    'pleeease',
-                    'copy'
-                ]
-            },
             scripts: {
                 files: [
                     './lint/es-lint.json',
