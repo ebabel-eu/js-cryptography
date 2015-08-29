@@ -138,8 +138,7 @@ module.exports = function (grunt) {
                 ],
                 tasks: [
                     'eslint',
-                    'concat',
-                    'copy'
+                    'concat'
                 ]
             },
             html: {
@@ -147,17 +146,7 @@ module.exports = function (grunt) {
                     'src/index.html'
                 ],
                 tasks: [
-                    'htmlangular',
-                    'copy'
-                ]
-            },
-            style: {
-                files: [
-                    './src/css/*.css'
-                ],
-                tasks: [
-                    'cssmin',
-                    'copy'
+                    'htmlangular'
                 ]
             },
             grunt: {
@@ -167,19 +156,13 @@ module.exports = function (grunt) {
                 tasks: [
                     'eslint',
                     'concat',
-                    'htmlangular',
-                    'copy'
+                    'htmlangular'
                 ]
             }
         }
         
     });
-
-    // During development, continuous building for both css and javascript: run 'grunt watch' command (see watch above).
-    // Warning: this watch does not include minification.
     
-    // Prior to release. One-off build for both css and javascript, including minification: run 'grunt' command.
-    // There is no linting in this version, since linting is meant to happen during development.
     grunt.registerTask('default', [
         'concat',
         'uglify',

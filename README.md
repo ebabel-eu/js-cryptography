@@ -11,11 +11,19 @@ bower install
 
 ## Full build before a deployment
 
+Prior to release, one-off build for both css, javascript and html, including minification: run `grunt` command.
+
+There is no linting in this version, since linting is meant to happen during development.
+
 ```
 grunt
 ```
 
 ## Watch build while development
+
+During development, continuous building for both css and javascript: run `grunt watch` command.
+
+Warning: this watch does not include minification.
 
 ```
 grunt watch
