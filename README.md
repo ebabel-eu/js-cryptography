@@ -2,6 +2,14 @@
 
 Test client side Javascript cryptography algorythms.
 
+## todo
+
+- Implement MD5 hashing
+- Deploy to github pages
+- Add unit tests
+- Add end to end tests
+- Link to this from ebabel.eu home
+
 ## Install
 
 ```
