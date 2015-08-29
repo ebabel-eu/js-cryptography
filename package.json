@@ -1,5 +1,5 @@
 {
-  "name": "js-cryptography",
+  "name": "jsCryptography",
   "version": "1.0.0",
   "description": "Test client side Javascript cryptography algorythms.",
   "main": "production.index.js",
