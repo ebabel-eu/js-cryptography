@@ -88,20 +88,20 @@ module.exports = function (grunt) {
 
         copy: {
             html: {
-                        nonull: true,
-                        src: [
-                            'src/index.html',
-                        ], 
-                        dest: 'build/index.html',
-                        options: {
-                            process: function (content, srcpath) {
-                                return content
-                                    .replace(/\.css/g,'.min.css')
-                                    .replace(/\.js/g, '.min.js')
-                                    .replace(/analytics.min.js/g, 'analytics.js');
-                            },
-                        }
-
+                nonull: true,
+                src: [
+                    'src/index.html',
+                ], 
+                dest: 'build/index.html',
+                options: {
+                    process: function (content, srcpath) {
+                        return content
+                            .replace(/\.css/g,'.min.css')
+                            .replace(/\.js/g, '.min.js')
+                            .replace(/\[DEV\]\s/, '')
+                            .replace(/analytics.min.js/g, 'analytics.js');
+                    },
+                }
             },
             main: {
                 files: [
@@ -132,7 +132,7 @@ module.exports = function (grunt) {
         watch: {
             scripts: {
                 files: [
-                    './lint/es-lint.json',
+                    './src/lint/es-lint.json',
                     './src/js/scripts/*.js',
                     './src/js/scripts/**/*.js'
                 ],
@@ -148,6 +148,15 @@ module.exports = function (grunt) {
                 ],
                 tasks: [
                     'htmlangular',
+                    'copy'
+                ]
+            },
+            style: {
+                files: [
+                    './src/css/*.css'
+                ],
+                tasks: [
+                    'cssmin',
                     'copy'
                 ]
             },
