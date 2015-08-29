@@ -25,8 +25,9 @@ module.exports = function (grunt) {
                     // Third party javascript dependencies used in this website.
                     './src/js/dependencies.js' : [
                         './bower_components/angular/angular.js',
-                        './bower_components/cryptojs/cryptojs.js',
-                        './bower_components/cryptojs/lib/*.js'
+
+                        // Third party libraries downloaded manually because they are not managed by Bower.
+                        './src/js/libs/crypto-js/3.1.2/md5.js'
                     ],
                     
                     // All custom scripts written for this website.

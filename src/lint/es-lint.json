@@ -5,7 +5,8 @@
     },
     "globals": {
         "window": true,
-        "angular": true
+        "angular": true,
+        "CryptoJS": true
     },
     "rules": {
         "no-redeclare": [2, {"builtinGlobals": true}],

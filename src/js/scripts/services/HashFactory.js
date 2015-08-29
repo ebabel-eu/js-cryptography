@@ -6,8 +6,7 @@ angular
 
             return {
                 get: function (input) {
-                    // todo: write the actual Hashing implementation.
-                    return Date.now();
+                    return CryptoJS.MD5(input).toString();
                 }
             }
         }

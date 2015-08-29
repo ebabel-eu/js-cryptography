@@ -26,7 +26,7 @@
                         ng-change="md5Ctrl.setHash(email)" 
                         ng-model-options="{ debounce: 350 }">
 
-                    <p ng-show="email.text && email.hash"><em>{{email.hash}}</em> totally hashes your {{email.text}} awesome e-mail!</p>
+                    <p ng-show="email.text && email.hash"><em ng-attr-title="This is the MD5 hash of {{email.text}}">{{email.hash}}</em> totally hashes your {{email.text}} awesome e-mail!</p>
 
                     <p ng-show="!md5Form.$valid">I need your e-mail, and it's got to be valid!</p>
                 </fieldset>
