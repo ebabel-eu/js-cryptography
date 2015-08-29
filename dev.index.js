@@ -28,7 +28,7 @@
     });
 
     // Handle all static file GET requests.
-    app.use(express.static(__dirname + '/build'));
+    app.use(express.static(__dirname + '/src'));
 
     http.createServer(app.handle.bind(app))
         .listen(port.http, function() {

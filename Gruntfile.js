@@ -158,9 +158,6 @@ module.exports = function (grunt) {
                 tasks: [
                     'eslint',
                     'concat',
-                    'scsslint',
-                    'sass',
-                    'pleeease',
                     'htmlangular',
                     'copy'
                 ]
@@ -177,14 +174,7 @@ module.exports = function (grunt) {
     grunt.registerTask('default', [
         'concat',
         'uglify',
-        'sass',
-        'pleeease',
         'cssmin',
         'copy'
-    ]);
-
-    grunt.registerTask('wercker', [
-        'eslint',
-        'htmlangular'
     ]);
 };
