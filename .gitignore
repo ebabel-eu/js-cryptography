@@ -1,4 +1,11 @@
+# Mac thumbnail files
 .DS_Store
+
+# Dependency libraries
 bower_components
 node_modules
+
+# Generated files
 build
+src/js/dependencies.js
+src/js/scripts.js
