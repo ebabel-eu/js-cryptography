@@ -19,6 +19,6 @@
   ],
   "dependencies": {
     "angular": "1.4.5",
-    "forge": "0.6.34"
+    "cryptojs": "*"
   }
 }

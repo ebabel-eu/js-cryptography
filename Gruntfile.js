@@ -24,7 +24,9 @@ module.exports = function (grunt) {
                 files: {
                     // Third party javascript dependencies used in this website.
                     './src/js/dependencies.js' : [
-                        './bower_components/angular/angular.js'
+                        './bower_components/angular/angular.js',
+                        './bower_components/cryptojs/cryptojs.js',
+                        './bower_components/cryptojs/lib/*.js'
                     ],
                     
                     // All custom scripts written for this website.
