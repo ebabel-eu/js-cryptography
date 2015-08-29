@@ -4,18 +4,17 @@ angular
 
         // Dependencies.
         '$scope',
+        'Gravatar',
 
         // Gravatar Controller.
-        function GravatarController ($scope) {
+        function GravatarController ($scope, Gravatar) {
             var controller = this;
-            var gravatarUrl = 'http://www.gravatar.com/avatar/';
-            var size = 200;
 
             $scope.$on('updateGravatar', function (event, args) {
-                controller.avatar = {
-                    url: [gravatarUrl, args.hash, '?s=', size].join(''),
-                    found: true
-                };
+                Gravatar.update({
+                    controller: controller,
+                    args: args
+                });
             });
         }
 
