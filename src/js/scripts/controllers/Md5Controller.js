@@ -3,14 +3,17 @@ angular
     .controller('Md5Controller', [
 
         // Dependencies.
-        '$scope', 
+        '$rootScope',
         'Hash',
 
         // MD5 Controller.
-        function Md5Controller ($scope, Hash) {
+        function Md5Controller ($rootScope, Hash) {
 
             this.setHash = function (toUpdate) {
                 toUpdate.hash = Hash.get(toUpdate.text);
+
+                // Emit a custom event to communicate with another controller.
+                $rootScope.$broadcast('updateGravatar', toUpdate);
             };
 
         }

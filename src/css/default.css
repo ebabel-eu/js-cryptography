@@ -69,8 +69,8 @@ p {
 
 a {
     color: #7147E2;
-    padding: 0 .5em;
-    border-radius: .5em;
+    padding: 0 .2em;
+    border-radius: .2em;
 }
 
 a:hover,
@@ -128,6 +128,10 @@ em {
     font-style: normal;
     border-radius: 16px;
     margin-right: .25em;
+}
+
+img {
+    border-radius: 24px;
 }
 
 .ng-dirty.ng-invalid {
