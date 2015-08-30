@@ -8,8 +8,11 @@ module.exports = function (config) {
         files: _config.dependencies
             .concat(_config.scripts)
             .concat([
+                // Angular Mocks, library only used by unit tests.
+                './bower_components/angular-mocks/angular-mocks.js',
+
                 // Unit tests.
-                './src/unit-tests/spec/*Spec.js'
+                './src/unit-tests/spec/**/*Spec.js'
             ]),
         exclude: [
             './src/unit-tests/spec/*_Exclude/*.js',
