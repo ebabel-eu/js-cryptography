@@ -9,10 +9,11 @@ module.exports = function (config) {
             .concat(_config.scripts)
             .concat([
                 // Unit tests.
-                './src/unit-tests/spec/**/*Spec.js'
+                './src/unit-tests/spec/*Spec.js'
             ]),
         exclude: [
-            './src/unit-tests/spec/*_Exclude/*.js'
+            './src/unit-tests/spec/*_Exclude/*.js',
+            './src/js/libs/**/*.js'
         ],
         browsers: ['PhantomJS'],
         autoWatch: true,
