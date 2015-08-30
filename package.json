@@ -2,7 +2,7 @@
   "name": "jsCryptography",
   "version": "1.0.0",
   "description": "Test client side Javascript cryptography algorythms.",
-  "main": "production.index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

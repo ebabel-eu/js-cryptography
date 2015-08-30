@@ -37,8 +37,10 @@ grunt watch
 
 ## Run locally
 
+The files to edit while working locally are located in the `src` directory. The entire `build` directory is generated and should not be edited.
+
 ```
-node dev.index.js
+node index.js
 ```
 
 ## Browse locally

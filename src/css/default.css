@@ -108,6 +108,10 @@ input {
     min-width: 220px;
 }
 
+input:focus {
+    border-color: #F483FF;
+}
+
 em {
     padding: .2em .75em;
     background-color: #FBBFFF;
