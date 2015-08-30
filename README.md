@@ -6,6 +6,7 @@ Test client side Javascript cryptography algorythms.
 
 - Add unit tests.
 - Add end to end tests.
+- Add JSDoc.
 - Look at other APIs where information related to an e-mail can be found (like Gravatar).
 
 ## Install
