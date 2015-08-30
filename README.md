@@ -36,11 +36,23 @@ Warning: this watch does not include minification.
 grunt watch
 ```
 
-# Run unit tests
+## Run unit tests
 
 ```
 grunt tests
 ```
+
+### Test coverage report
+
+To consult the test coverage report (unit tests), browse:
+
+http://localhost:5000/unit-tests/coverage/
+
+The directory with your local system should be listed as a link.
+
+Example:
+
+http://localhost:5000/unit-tests/coverage/PhantomJS%201.9.8%20(Mac%20OS%20X%200.0.0)/
 
 ## Run locally
 

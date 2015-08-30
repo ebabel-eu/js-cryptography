@@ -4,7 +4,7 @@
   "description": "Test client side Javascript cryptography algorythms.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "grunt tests"
   },
   "author": "nadjibamar <hello@ebabel.eu>",
   "license": "MIT",
@@ -13,7 +13,6 @@
     "url": "https://github.com/ebabel-eu/js-cryptography.git"
   },
   "devDependencies": {
-    "express": "4.13.3",
     "grunt": "0.4.5",
     "grunt-contrib-concat": "0.5.1",
     "grunt-contrib-copy": "0.8.0",
@@ -30,6 +29,8 @@
     "karma-phantomjs-launcher": "0.2.1",
     "load-grunt-tasks": "3.2.0",
     "phantomjs": "1.9.18",
-    "serve-index": "^1.7.2"
+    "finalhandler": "0.4.0",
+    "serve-index": "1.7.2",
+    "serve-static": "1.10.0"
   }
 }

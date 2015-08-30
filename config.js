@@ -1,4 +1,7 @@
 module.exports = {
+    'port': {
+        'http': 5000
+    },
     'dependencies': [
         // Libraries managed with Bower.
         './bower_components/angular/angular.js',

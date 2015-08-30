@@ -1,40 +1,32 @@
 (function () {
     'use strict';
 
+    var config = require('./config');
+    var port = config.port;
+    var finalhandler = require('finalhandler');
     var http = require('http');
-    var express = require('express');
-    var app = express();
-    var port = {
-        http: 5000
-    };
+    var serveIndex = require('serve-index');
+    var serveStatic = require('serve-static');
 
-    app.set('port', (process.env.PORT || port.http));
-    port.http = app.get('port');
+    // Serve directory indexes for src folders (with icons).
+    var index = serveIndex('src', {'icons': true});
 
-    // Simple logger.
-    app.use(function (req, res, next) {
-        console.log('%s %s', req.method, req.url);
-        next();
+    // Serve up src folder files.
+    var serve = serveStatic('src');
+
+    // Create server
+    var server = http.createServer(function onRequest (req, res) {
+        var done = finalhandler(req, res);
+        serve(req, res, function onNext(err) {
+            if (err) {
+                return done(err);
+            }
+            index(req, res, done);
+        })
     });
 
-    // Set generic headers used in all responses.
-    app.use(function (req, res, next) {
-        res.set({
-            'X-Powered-By': 'NodeJS',
-            'Access-Control-Allow-Methods': 'GET, POST',                        // Allowed request http verbs.
-            'Access-Control-Allow-Headers': 'X-Requested-With,content-type',    // Allowed request headers.
-            'Cache-Control': 'public, max-age=345600',                          // 4 days
-            'Expires': new Date(Date.now() + 345600000).toUTCString()
-        });
-        next();
+    // Listen
+    server.listen(port.http, function() {
+        console.log('Listening with http on port ' + port.http);
     });
-
-    // Handle all static file GET requests.
-    app.use(express.static(__dirname + '/src'));
-
-    http.createServer(app.handle.bind(app))
-        .listen(port.http, function() {
-            console.log('Listening with http on port ' + port.http);
-        });
-
 }());
