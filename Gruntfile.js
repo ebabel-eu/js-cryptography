@@ -1,6 +1,8 @@
 // Build the front-end source to run locally.
 module.exports = function (grunt) {
 
+    var config = require('./config');
+
     require('load-grunt-tasks')(grunt);
 
     grunt.initConfig({
@@ -9,10 +11,7 @@ module.exports = function (grunt) {
             options: {
                 configFile: './src/lint/es-lint.json'    // Default rules: http://eslint.org/docs/rules/
             },
-            target: [
-                './src/js/scripts/*.js',
-                './src/js/scripts/**/*.js'
-            ]
+            target: config.scripts
         },
 
         concat: {
@@ -23,18 +22,10 @@ module.exports = function (grunt) {
             js: {
                 files: {
                     // Third party javascript dependencies used in this website.
-                    './src/js/dependencies.js' : [
-                        './bower_components/angular/angular.js',
-
-                        // Third party libraries downloaded manually because they are not managed by Bower.
-                        './src/js/libs/crypto-js/3.1.2/md5.js'
-                    ],
+                    './src/js/dependencies.js' : config.dependencies,
                     
                     // All custom scripts written for this website.
-                    './src/js/scripts.js': [
-                        './src/js/scripts/*.js',
-                        './src/js/scripts/**/*.js'
-                    ]
+                    './src/js/scripts.js': config.scripts
                 }
             }
         },
@@ -130,15 +121,20 @@ module.exports = function (grunt) {
             },
         },
 
+        // Run unit tests
+        karma: {
+            unit: {
+                configFile: './src/unit-tests/karma.conf.js',
+                logLevel: 'ERROR'
+            }
+        },
+
         // Re-run these automated tasks each time certain files are modified.
         // These tasks are meant for development and include linting.
         watch: {
             scripts: {
-                files: [
-                    './src/lint/es-lint.json',
-                    './src/js/scripts/*.js',
-                    './src/js/scripts/**/*.js'
-                ],
+                files: ['./src/lint/es-lint.json']
+                    .concat(config.scripts),
                 tasks: [
                     'eslint',
                     'concat'
@@ -171,5 +167,9 @@ module.exports = function (grunt) {
         'uglify',
         'cssmin',
         'copy'
+    ]);
+
+    grunt.registerTask('tests', [
+        'karma'
     ]);
 };

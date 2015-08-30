@@ -36,6 +36,12 @@ Warning: this watch does not include minification.
 grunt watch
 ```
 
+# Run unit tests
+
+```
+grunt tests
+```
+
 ## Run locally
 
 The files to edit while working locally are located in the `src` directory. The entire `build` directory is generated and should not be edited.

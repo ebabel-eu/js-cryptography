@@ -22,6 +22,13 @@
     "grunt-contrib-watch": "0.6.1",
     "grunt-eslint": "17.1.0",
     "grunt-html-angular-validate": "0.5.1",
+    "grunt-karma": "0.12.0",
+    "jasmine-core": "2.3.4",
+    "karma": "0.13.9",
+    "karma-coverage": "0.5.1",
+    "karma-jasmine": "0.3.6",
+    "karma-phantomjs-launcher": "0.2.1",
+    "phantomjs": "1.9.18",
     "load-grunt-tasks": "3.2.0"
   }
 }
