@@ -10,3 +10,4 @@ build
 src/js/dependencies.js
 src/js/scripts.js
 html-angular-validate-report.json
+src/unit-tests/coverage
