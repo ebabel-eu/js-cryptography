@@ -4,9 +4,9 @@ Test client side Javascript cryptography algorythms.
 
 ## todo
 
-- Add unit tests
-- Add end to end tests
-- Link to this angular app from ebabel.eu home website
+- Add unit tests.
+- Add end to end tests.
+- Look at other APIs where information related to an e-mail can be found (like Gravatar).
 
 ## Install
 
