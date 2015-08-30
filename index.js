@@ -21,8 +21,10 @@
     app.use(function (req, res, next) {
         res.set({
             'X-Powered-By': 'NodeJS',
-            'Access-Control-Allow-Methods': 'GET, POST',               // Allowed request http verbs.
-            'Access-Control-Allow-Headers': 'X-Requested-With,content-type'    // Allowed request headers.
+            'Access-Control-Allow-Methods': 'GET, POST',                        // Allowed request http verbs.
+            'Access-Control-Allow-Headers': 'X-Requested-With,content-type',    // Allowed request headers.
+            'Cache-Control': 'public, max-age=345600',                          // 4 days
+            'Expires': new Date(Date.now() + 345600000).toUTCString()
         });
         next();
     });
