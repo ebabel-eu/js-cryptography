@@ -4,9 +4,8 @@ Test client side Javascript cryptography algorythms.
 
 ## todo
 
-- Add unit tests: see https://docs.angularjs.org/guide/unit-testing
-- Add end to end tests.
 - Add JSDoc.
+- Add end to end tests.
 - Look at other APIs where information related to an e-mail can be found (like Gravatar).
 
 ## Install
