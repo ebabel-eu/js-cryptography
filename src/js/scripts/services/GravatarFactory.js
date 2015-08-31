@@ -6,7 +6,6 @@ angular
         'GravatarUrl',
 
         function GravatarFactory ($http, GravatarUrl) {
-
             return {
                 get: function (data) {
                     var controller = data.controller;

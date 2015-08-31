@@ -1,8 +1,9 @@
 describe('Gravatar Controller', function() {
-
-    beforeEach(module('jsCryptography'));
+    'use strict';
 
     var $scope, $rootScope, $controller;
+
+    beforeEach(module('jsCryptography'));
 
     beforeEach(inject(function (_$injector_) {
         $rootScope = _$injector_.get('$rootScope');

@@ -3,7 +3,6 @@ angular
     .factory('GravatarUrl', [
 
         function GravatarUrlFactory() {
-
             return {
                 get: function (input) {
                     return [

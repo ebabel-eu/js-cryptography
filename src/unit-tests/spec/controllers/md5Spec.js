@@ -1,8 +1,9 @@
 describe('Md5 Controller', function() {
-
-    beforeEach(module('jsCryptography'));
+    'use strict';
 
     var $rootScope, $controller;
+
+    beforeEach(module('jsCryptography'));
 
     beforeEach(inject(function (_$controller_){
         $controller = _$controller_('Md5Controller');
