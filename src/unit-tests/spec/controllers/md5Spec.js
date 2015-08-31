@@ -4,9 +4,13 @@ describe('Md5 Controller', function() {
 
     var $rootScope, $controller;
 
-    beforeEach(inject(function(_$controller_, _$rootScope_){
-        $rootScope = _$rootScope_.$new();
+    beforeEach(inject(function (_$controller_){
         $controller = _$controller_('Md5Controller');
+    }));
+
+    beforeEach(inject(function (_$injector_) {
+        $rootScope = _$injector_.get('$rootScope');
+        spyOn($rootScope, '$broadcast');
     }));
 
     it('makes a setHash function available', function() {
@@ -37,5 +41,13 @@ describe('Md5 Controller', function() {
         expect(first.hash).toBe(second.hash);
     });
 
-    // todo: mock test the rootScope broadcast event has been emitted.
+    it('should broadcast getGravatar event with an email object', function() {
+        var email = {
+            text: 'test@example.nl'
+        };
+
+        $controller.setHash(email);
+
+        expect($rootScope.$broadcast).toHaveBeenCalledWith('getGravatar', email);
+    });
 });
