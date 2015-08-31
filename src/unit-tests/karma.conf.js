@@ -15,8 +15,7 @@ module.exports = function (config) {
                 './src/unit-tests/spec/**/*Spec.js'
             ]),
         exclude: [
-            './src/unit-tests/spec/*_Exclude/*.js',
-            './src/js/libs/**/*.js'
+            './src/unit-tests/spec/*_Exclude/*.js'
         ],
         browsers: ['PhantomJS'],
         autoWatch: true,
