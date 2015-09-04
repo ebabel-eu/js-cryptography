@@ -4,6 +4,9 @@ Test client side Javascript cryptography algorythms.
 
 ## todo
 
+- Use ng-view and a navigation to switch between MD5 and Forge SSH pages.
+- Add directives.
+- Add Forge to create an SSH key pair in the client side and let user download it.
 - Add JSDoc.
 - Add end to end tests.
 - Look at other APIs where information related to an e-mail can be found (like Gravatar).

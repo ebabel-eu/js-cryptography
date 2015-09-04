@@ -1,2 +1,2 @@
 // Setup app main module and its dependencies.
-angular.module('jsCryptography', []);
+angular.module('jsCryptography', ['ngRoute']);

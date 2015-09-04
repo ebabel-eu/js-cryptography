@@ -6,7 +6,15 @@
     "globals": {
         "window": true,
         "angular": true,
-        "CryptoJS": true
+        "CryptoJS": true,
+        "describe": true,
+        "beforeEach": true,
+        "module": true,
+        "inject": true,
+        "afterEach": true,
+        "it": true,
+        "expect": true,
+        "spyOn": true
     },
     "rules": {
         "no-redeclare": [2, {"builtinGlobals": true}],

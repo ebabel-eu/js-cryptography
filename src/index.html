@@ -18,42 +18,14 @@
             <h1>Javascript cryptography <small>run cryptography algorythms in your browser</small> </h1>
         </header>
 
-        <section>
-            <h2>Gimme your e-mail to MD5 hash ;-)</h2>
+        <nav>
+            <ul>
+                <li><a href="#/md5">MD5</a></li>
+                <li><a href="#/ssh">SSH</a></li>
+            </ul>
+        </nav>
 
-            <form ng-controller="Md5Controller as md5Ctrl" name="md5Form">
-                <fieldset>
-                    <input 
-                        type="email" 
-                        placeholder="Write your e-mail" 
-                        required 
-                        ng-model="email.text" 
-                        ng-change="md5Ctrl.setHash(email)" 
-                        ng-model-options="{ debounce: 350 }">
-
-                    <p ng-show="email.text && email.hash"><em ng-attr-title="This is the MD5 hash of {{email.text}}">{{email.hash}}</em> totally hashes your {{email.text}} awesome e-mail!</p>
-
-                    <p ng-show="!md5Form.$valid">I need your e-mail, and it's got to be valid!</p>
-                </fieldset>
-            </form>
-        </section>
-
-        <section ng-controller="GravatarController as grvtrCtrl" ng-show="grvtrCtrl.avatar.response">
-            <h2 ng-show="grvtrCtrl.avatar.found">What a cutie pie Gravatar you got yourself!!!</h2>
-            <h2 ng-show="!grvtrCtrl.avatar.found">Booo, le sad, no Gravatar :-(</h2>
-
-            <form>
-                <fieldset>
-                    <p>
-                        <img ng-src="{{grvtrCtrl.avatar.url}}" src="../img/sad-kitty-by-rakuhund.jpg" alt="avatar">
-                    </p>
-
-                    <p ng-show="grvtrCtrl.avatar.found">I sooo totally love your Gravatar :-)</p>
-
-                    <p ng-show="!grvtrCtrl.avatar.found">I couldn't find your <a href="http://gravatar.com">Gravatar selfie</a>... wanna make one?</p>
-                </fieldset>
-            </form>
-        </section>
+        <div ng-view></div>
 
         <footer>
             <p>&copy; 2015 <a href="http://ebabel.eu">Nadjib Amar</a> <small>(MIT License)</small></p>

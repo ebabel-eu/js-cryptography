@@ -11,7 +11,8 @@ module.exports = function (grunt) {
             options: {
                 configFile: './src/lint/es-lint.json'    // Default rules: http://eslint.org/docs/rules/
             },
-            target: config.scripts
+            target: ['./src/unit-tests/spec/**/*Spec.js']
+                .concat(config.scripts)
         },
 
         concat: {
@@ -56,12 +57,11 @@ module.exports = function (grunt) {
 
         htmlangular: {
             options: {
-                reportpath: 'src/lint/html-angular-validate-report.json'
+                reportpath: 'src/lint/html-angular-validate-report.json',
+                tmplext: '.partial.html'
             },
             files: {
-                src: [
-                    './src/*.html'
-                ]
+                src: config.html
             }
         },
 
@@ -116,6 +116,13 @@ module.exports = function (grunt) {
                         src: ['src/img/**'], 
                         dest: 'build/img/', 
                         filter: 'isFile'
+                    },
+                    {
+                        expand: true, 
+                        flatten: true, 
+                        src: ['src/views/*.html'], 
+                        dest: 'build/views/', 
+                        filter: 'isFile'
                     }
                 ],
             },
@@ -141,16 +148,15 @@ module.exports = function (grunt) {
                 ]
             },
             html: {
-                files: [
-                    'src/index.html'
-                ],
+                files: config.html,
                 tasks: [
                     'htmlangular'
                 ]
             },
             grunt: {
                 files: [
-                    './Gruntfile.js'
+                    './Gruntfile.js',
+                    './config.js'
                 ],
                 tasks: [
                     'eslint',

@@ -1,4 +1,4 @@
-describe('Main app module', function() {
+describe('jsCryptography module', function() {
     'use strict';
 
     var $module;
@@ -19,9 +19,16 @@ describe('Main app module', function() {
         expect(name).toBe('jsCryptography');
     });
 
-    it('has no dependencies', function() {
+    it('has 1 dependency', function() {
         var dependencies = $module.requires;
 
-        expect(dependencies.length).toBe(0);
+        expect(dependencies.length).toBe(1);
+    });
+
+    it('depends on ngRoute', function() {
+        var dependencies = $module.requires;
+        var found = dependencies.indexOf('ngRoute') !== -1;
+
+        expect(found).toBe(true);
     });
 });

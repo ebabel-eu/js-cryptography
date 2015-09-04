@@ -17,6 +17,7 @@ angular
                     $http.get(url)
                         .then(function (response) {
                             // Success.
+                            // todo: process the response binary and display it as an image.
                             controller.avatar = {
                                 url: url,
                                 found: true,
@@ -24,6 +25,7 @@ angular
                             };
                         }, function (response) {
                             // Error.
+                            // todo: use the response error message, if any?
                             controller.avatar = {
                                 url: './img/sad-kitty-by-rakuhund.jpg',
                                 found: false,
