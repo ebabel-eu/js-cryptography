@@ -1,5 +1,8 @@
 # js cryptography
 
+[![Dependency Status](https://david-dm.org/ebabel-eu/js-cryptography.svg)](https://david-dm.org/ebabel-eu/js-cryptography)
+[![devDependency Status](https://david-dm.org/ebabel-eu/js-cryptography/dev-status.svg)](https://david-dm.org/ebabel-eu/js-cryptography#info=devDependencies)
+
 Test client side Javascript cryptography algorythms.
 
 ## todo
